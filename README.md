@@ -1,14 +1,83 @@
-# Omni-Logistics Predictor
+🚢 Omni-Logistics V2: Enterprise AI Supply Chain Engine
 
-This project predicts cargo shipment delays using a combination of NLP, Deep Learning, and Core Machine Learning.
+Omni-Logistics is a production-grade predictive engine designed to forecast cargo shipment delays by synthesizing heterogeneous data sources. By combining Natural Language Processing, Deep Learning (Sequential Modeling), and Core Ensemble Machine Learning, this application provides actionable supply chain intelligence.
 
-## Setup Instructions
+🚀 Key Features
 
-1. Extract the zip file and open the folder in your terminal/VS Code.
-2. Create a virtual environment: `python -m venv venv`
-3. Activate the virtual environment:
-   - Windows: `.\venv\Scripts\activate`
-   - Mac/Linux: `source venv/bin/activate`
-4. Install the dependencies: `pip install -r requirements.txt`
-5. Run the application: `streamlit run app.py`
+Multimodal AI Pipeline:
+
+NLP Component: Fine-tuned Transformer (DistilBERT) to assess the risk impact of geopolitical news and weather reports.
+
+Deep Learning Component: MLP Regressor to analyze temporal sequences of ship speed/trajectory health.
+
+Core ML Component: RandomForestRegressor ensemble to synthesize distance, momentum, and risk scores into a final ETA delay prediction.
+
+Geospatial Feature Engineering: Utilizes the Haversine formula to compute accurate great-circle distances between GPS coordinates.
+
+Live Data Integration: Fetches real-time weather metrics using the Open-Meteo API.
+
+Data Engineering: Persistent SQLite logging to track historical predictions for auditability.
+
+Explainable AI: Integrated SHAP (SHapley Additive exPlanations) to visualize feature impact on model decisions.
+
+🛠️ Tech Stack
+
+Frontend/Dashboard: Streamlit
+
+Machine Learning: Scikit-Learn, PyTorch, Hugging Face Transformers
+
+Data Handling: Pandas, NumPy
+
+Database: SQLite3
+
+Visualization: Matplotlib, Plotly
+
+⚙️ Local Setup
+
+Clone the repository:
+
+git clone [https://github.com/YOUR_USERNAME/omni-logistics-v2.git](https://github.com/YOUR_USERNAME/omni-logistics-v2.git)
+cd omni-logistics-v2
+
+
+Create and activate a virtual environment:
+
+# Windows
+python -m venv venv
+.\venv\Scripts\activate
+
+# Mac/Linux
+python -m venv venv
+source venv/bin/activate
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Launch the Dashboard:
+
+streamlit run app.py
+
+
+🏗️ Architecture Overview
+
+The application follows a modular design pattern to ensure scalability and maintainability:
+
+app.py: The orchestrator—handles Streamlit UI and pipeline execution.
+
+models.py: Encapsulates AI model training and inference logic.
+
+features.py: Contains geospatial math and external API integration logic.
+
+database.py: Manages SQLite connections and historical logging.
+
+📈 Next Steps for Expansion
+
+Deployment: Ready for containerization via Docker for cloud-native deployment.
+
+MLOps: Implementing automated model retraining based on database logs to counter model drift.
+
+GenAI Integration: Adding a LLM-based "Logistics Copilot" to query historical database trends in plain English.
     
