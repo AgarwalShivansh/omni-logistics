@@ -7,3 +7,4 @@ torch>=2.2.1
 shap>=0.45.0
 requests>=2.31.0
 matplotlib>=3.8.3
+streamlit-folium>=0.10.0
