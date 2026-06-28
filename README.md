@@ -5,7 +5,7 @@ Omni-Logistics is a production-grade predictive engine designed to forecast carg
 🌐 Live Dashboard
 
 Access the live application here:
-https://omni-logistics-app.streamlit.app
+https://omni-logistics.streamlit.app
 
 🚀 Key Features
 
